@@ -1,0 +1,28 @@
+﻿{
+   "volumeEncryptionKey": "string",
+   "replicationTags": [
+      {}
+   ],
+   "disablePublicIp": true,
+   "subnetHostProject": "string",
+   "replicationSoftwareDownloadSource": "string",
+   "replicationServerType": "string",
+   "useLowCostDisks": true,
+   "computeLocationId": "string",
+   "cloudCredentials": "string",
+   "subnetId": "string",
+   "logicalLocationId": "string",
+   "bandwidthThrottling": 0,
+   "useDedicatedServer": true,
+   "zone": "string",
+   "replicatorSecurityGroupIDs": [
+      "string"
+   ],
+   "usePrivateIp": true,
+   "proxyUrl": "string",
+   "volumeEncryptionAllowed": true,
+   "objectStorageLocation": "string",
+   "archivingEnabled": true,
+   "converterType": "string",
+   "storageLocationId": "string"
+}

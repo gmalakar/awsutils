@@ -1,0 +1,54 @@
+[PER]
+aws_access_key_id = <access key>
+aws_secret_access_key = <access secret>
+
+
+
+awscm -U:GEN -service:config -awsacceskey:<access key> -awssecret:<access secret> -awssessiontoken: -credpath:C:\workspace\AWSConfigManager\.aws\credentials -region:us-east-2 
+
+awscm -U:GEN -service:config -awsacceskey:<access key> -awssecret:<access secret> -awssessiontoken: -region:us-east-2 
+
+
+awscm -U:GEN -service:config -awsacceskey:<access key> -awssecret:<access secret> -awssessiontoken: -region:us-east-2 -credpath:C:\workspace\AWSConfigManager\.aws\credentials -profile:per -configpath:C:\workspace\AWSConfigManager\.aws\config
+
+
+
+awscm -U:GEN -service:config -awsacceskey: -awssecret: -awssessiontoken: -credpath: -region: -profile: -configpath:
+awscm -U:GEN -service:config -credpath:
+
+
+awscm -U:GEN -service:config -region:us-east-2 -credpath:C:\workspace\AWSConfigManager\.aws\credentials -profile:per -configpath:C:\workspace\AWSConfigManager\.aws\config
+
+
+awscm -U:EC2 -instanceid:i-0ea70145b347f1769 -service:chk
+
+awscm -U:EC2 -service:getallids
+awscm -U:EC2 -s:vpc -a:set -name:testvpc -ipv4cidr:"10.0.0.0/16"
+
+awscm -u:EC2 -s:sg -a:create -groupname:testsg -description:"Created using AWS CM CLI" -vpcid:vpc-6dfe5f06
+awscm -u:EC2 -s:iprange -a:create
+awscm -u:EC2 -s:kp -a:create
+awscm -u:EC2 -s:kp -a:create -keyname:aws_cli_dev -filename:aws_cli_dev.pem
+
+awscm -U:EC2 -s:describe -t:sg -groupid:sg-04738aebf1b4db2bd
+awscm -U:EC2 -s:describe -t:ec2 -instanceid:i-08ad6609b1212b9e8
+awscm -U:EC2 -s:describe
+awscm -U:EC2 -s:describe -t:ec2
+awscm -U:EC2 -s:describe -t:vpc
+awscm -U:EC2 -s:describe -t:kp -keyname:mykey
+
+
+awscm -U:EC2 -s:ec2 -a:launch -amiid:ami-066a1a3fa81bfbd00 -keyname:aws_cli_dev -groups:sg-0631830ed040c6c78
+
+awscm -u:EC2 -s:sn -a:create -vpcid:vpc-02ae1303c09a7e9e0 -name:"my subnet"
+
+awscm -U:EC2 -s:ec2 -a:pwd -instanceid:i-0cf8311413ea9fdf8 -keyfilepath:aws_cli_dev.pem
+
+awscm -U:EC2 -s:ec2 -a:terminate -instanceids:i-0cf8311413ea9fdf8
+awscm -U:CE -s:login -username:<user name> -password:<password>
+
+
+
+
+
+
